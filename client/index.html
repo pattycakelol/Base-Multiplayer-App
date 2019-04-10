@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>base multiplayer app</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="chat-wrapper">
+        <ul id="chat"></ul>
+
+        <div class="chat-input-wrapper">
+            <form id="chat-form">
+                <input id="chatMessage" autocomplete="off">
+                <button id="sendChat">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="src/client.js"></script>
+</body>
+</html>
