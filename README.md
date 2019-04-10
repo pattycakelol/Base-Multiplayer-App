@@ -13,3 +13,5 @@ At the moment, this project sets up the server to serve pages to the client and 
     * either by:
         * room codes
         * room finder (list of available rooms)
+
+* learn to style README
