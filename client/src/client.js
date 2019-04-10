@@ -1,12 +1,14 @@
-const writeEvent = (text) => {
-    // <ul> element
-    var parent = document.querySelector('#chat');
+var nick;
+while (!nick) {
+    nick = prompt("Nickname:");
+}
+const socket = io();
+socket.emit('newUser', nick);
 
-    // <li> element
-    const chatElement = document.createElement('li');
-    chatElement.innerHTML = text;
-
-    parent.appendChild(chatElement);
+const chatMessage = (messageObj) => {
+    $('#chat').append($(`<li class="${messageObj['type']}">`).text(messageObj['text']));
+    // var chat = document.getElementById('chat-wrapper');
+    // chat.scrollTop = chat.scrollHeight;
 };
 
 const onChatSend = (e) => {
@@ -14,12 +16,16 @@ const onChatSend = (e) => {
     const input = document.querySelector('#chatMessage');
     const text = input.value;
     input.value = '';
-    sock.emit('message', text);
+    socket.emit('message', {
+        type: 'chat',
+        text: text
+    });
 };
 
-//writeEvent('Welcome to the chat');
+// socket.on('message', writeEvent);
+socket.on('message', chatMessage);
 
-const sock = io();
-sock.on('message', writeEvent);
-//sock.emit('serverLog', "hello");
+// socket.emit('serverLog', "test");
+
+// when message is sent though chat input, emit messageto server
 document.querySelector('#chat-form').addEventListener('submit', onChatSend);
