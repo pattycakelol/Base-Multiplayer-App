@@ -7,6 +7,7 @@ At the moment, this project sets up the server to serve pages to the client and 
 more server stuff
 styling
 rooms(?)
+
     * either by:
         * room codes
         * room finder (list of available rooms)
