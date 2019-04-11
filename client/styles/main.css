@@ -24,7 +24,7 @@ body {
     font-family: 'Gill Sans', sans-serif;
 }
 
-#chat-form { /* chat-wrapper */
+#chat-form {
     width: 100%;
     display: flex;
 }

@@ -7,7 +7,10 @@ socket.emit('newUser', nick);
 
 const chatMessage = (messageObj) => {
     $('#chat-messages').append($(`<li class="${messageObj['type']}">`).text(messageObj['text']));
-    $('#chat-messages').scrollTop($(document).height());
+    // if client is scrolled to the bottom, the chat will autoscroll with a new message
+    if ($('#chat-messages').scrollTop() + 43 == $('#chat-messages')[0].scrollHeight - $('#chat-messages').height()) {
+        $('#chat-messages').scrollTop($('#chat-messages')[0].scrollHeight - $('#chat-messages').height());
+    }
 };
 
 socket.on('message', chatMessage);
