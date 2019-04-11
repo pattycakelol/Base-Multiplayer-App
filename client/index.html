@@ -8,16 +8,13 @@
 </head>
 <body>
     <div class="chat-wrapper">
-        <ul id="chat">
+        <ul id="chat-messages">
             <!-- chat messages inserted through js -->
         </ul>
-
-        <div class="chat-input-wrapper">
-            <form id="chat-form">
-                <input id="chat-message" autocomplete="off">
-                <button id="send-chat">Send</button>
-            </form>
-        </div>
+        
+        <form id="chat-form">
+            <input id="chat-input" autocomplete="off">
+        </form>
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="src/client.js"></script>

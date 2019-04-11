@@ -32,11 +32,6 @@ io.on('connection', (socket) => {
         };
         io.emit('message', connectMsg);
         messages.push(connectMsg);
-
-        socket.emit('message', {
-            type: 'system',
-            text: "Welcome to base multiplayer app!"
-        });
     });
 
     // message everyone the text recieved by client via chat
