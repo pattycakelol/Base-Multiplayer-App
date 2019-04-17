@@ -1,4 +1,4 @@
-var nick = "pat";
+var nick;
 while (!nick) {
     nick = prompt("Nickname:");
 }

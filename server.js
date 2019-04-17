@@ -2,7 +2,7 @@ const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const app = express();
-const clientPath = `${__dirname}/../client`;
+const clientPath = `${__dirname}/client/src`;
 console.log(`Serving static from ${clientPath}`);
 app.use(express.static(clientPath));
 const server = http.createServer(app);
