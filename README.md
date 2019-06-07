@@ -6,8 +6,6 @@ At the moment, this project sets up the server to serve pages to the client and 
 # To-do
 * more server stuff
 
-* organize files better
-
 * styling
 
 * rooms(?)
