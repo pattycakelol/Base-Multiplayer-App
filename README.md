@@ -28,5 +28,3 @@ So, with nothing else to say:
 * make a game..?
    * find out how many requests to firebase i can make
 * m o b i l e   f r i e n d l y
-
-* learn to style README
